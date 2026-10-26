@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hunt Country Soda Co. | Unsweetened Botanical Sodas from Monkton, Maryland</title>
+<meta name="description" content="Unsweetened botanical sodas brewed from real sassafras, sarsaparilla, spruce and sumac in Monkton, Maryland. No sugar, no sweeteners, no caffeine.">
+<meta property="og:title" content="Hunt Country Soda Co.">
+<meta property="og:description" content="The original root tonic, brewed again. Unsweetened botanical sodas from Monkton, Maryland.">
+<meta property="og:image" content="https://huntcountrysodaco.com/assets/can-market.jpg">
+<meta property="og:url" content="https://huntcountrysodaco.com/">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/assets/mark.png">
+<link rel="canonical" href="https://huntcountrysodaco.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Libre+Franklin:wght@400;500;600&display=swap">
+<style>
+/* Layout: a shop with a horse-country soul. Sticky shop header, photo hero, product grid with drawn cans and bottles, story band in brand green, dashed "plotted path" dividers. */
+:root{
+  --bg:#F4EFE3; --surface:#FBF8F1; --ink:#1E2A1B; --muted:#5A5446; --line:#DCD2BB;
+  --brand:#1C3618; --brand-ink:#F6E9BD; --brand-soft:#2A4626;
+  --gold:#D7A560; --gold-text:#7E5A1C;
+  --display:'Marcellus', 'Palatino Linotype', Palatino, Georgia, serif;
+  --body:'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  --radius:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1D0D; --surface:#162A14; --ink:#EEE5CB; --muted:#B8AF95; --line:#2F462B;
+  --brand:#1C3618; --brand-ink:#F6E9BD; --brand-soft:#24401F;
+  --gold:#D7A560; --gold-text:#E2BC7E; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0F1D0D; --surface:#162A14; --ink:#EEE5CB; --muted:#B8AF95; --line:#2F462B;
+  --brand:#1C3618; --brand-ink:#F6E9BD; --brand-soft:#24401F;
+  --gold:#D7A560; --gold-text:#E2BC7E; color-scheme:dark }
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--brand)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-text);font-weight:600}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 22px;border-radius:999px;font:600 14px/1 var(--body);letter-spacing:.04em;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .15s, background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-solid{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.btn-gold{background:var(--gold);color:#1C2A17;border-color:var(--gold)}
+.btn-ghost{background:transparent;color:inherit;border-color:currentColor}
+.path{display:flex;align-items:center;color:var(--gold)}
+.path i{width:9px;height:9px;border:1.5px solid currentColor;border-radius:50%;flex:none}
+.path b{flex:1;border-top:1.5px dashed currentColor}
+
+/* announcement + header */
+.announce{background:var(--brand);color:var(--brand-ink);font-size:13px;text-align:center;padding-block:8px}
+.announce .wrap{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.announce b{color:var(--gold);font-weight:600}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:24px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:22px;white-space:nowrap}
+.logo img{width:38px;height:38px;border-radius:50%;background:var(--brand)}
+nav.main{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:500}
+nav.main a{text-decoration:none;padding-block:8px;border-bottom:1.5px solid transparent}
+nav.main a:hover{border-bottom-color:var(--gold)}
+.cart-btn{position:relative;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:999px;min-height:44px;padding:0 16px;display:flex;align-items:center;gap:8px;font:600 14px var(--body);cursor:pointer}
+.cart-count{background:var(--brand);color:var(--brand-ink);border-radius:999px;min-width:22px;height:22px;font-size:12px;display:grid;place-items:center;padding:0 6px}
+@media (max-width:820px){nav.main{display:none}.cart-btn{margin-left:auto}.logo span{font-size:19px}}
+
+/* hero */
+.hero{padding-block:48px 56px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,72px);color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--gold-text)}
+.hero .lede{font-size:18px;color:var(--muted);max-width:34em;margin-top:20px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero .facts{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px;font-size:13px;color:var(--muted)}
+.hero .facts span{display:flex;align-items:center;gap:8px}
+.hero .facts span::before{content:"";width:7px;height:7px;border:1.5px solid var(--gold);border-radius:50%}
+.hero-photo{position:relative;justify-self:end;width:100%;max-width:470px}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:960/1276;object-fit:cover;border-radius:var(--radius)}
+.hero-photo .stamp{position:absolute;left:-28px;bottom:36px;background:var(--surface);border:1px solid var(--line);padding:14px 16px;border-radius:var(--radius);max-width:220px;font-size:13px;line-height:1.45;box-shadow:0 12px 30px -18px rgba(0,0,0,.4)}
+.hero-photo .stamp strong{display:block;font-family:var(--display);font-weight:400;font-size:20px;margin-bottom:2px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px}.hero-photo{justify-self:center}.hero-photo .stamp{left:12px}}
+
+/* section shell */
+section.block{padding-block:72px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.sec-head h2{font-size:clamp(30px,4vw,44px)}
+.sec-head p{color:var(--muted);max-width:36em;margin-top:10px}
+
+/* shop */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:500 14px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:1020px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;overflow:hidden}
+.card .stage{position:relative;height:300px;display:grid;place-items:center;cursor:pointer;border:0;background:var(--bg);width:100%;padding:0}
+.card .stage:hover .pack{transform:translateY(-6px) rotate(-2deg)}
+.card .badge{position:absolute;top:12px;left:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
+.card .info{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:24px}
+.card .sub{font-size:13px;color:var(--muted)}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px}
+.price{font-weight:600;font-variant-numeric:tabular-nums}
+.add{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--brand);color:var(--brand-ink);font:600 13px var(--body);cursor:pointer}
+.add:hover{background:var(--brand-soft)}
+
+/* drawn can */
+.pack{transition:transform .25s ease}
+.can{width:120px;display:flex;flex-direction:column;align-items:center}
+.can .lid{width:108px;height:9px;background:#C9C7BF;border-radius:6px 6px 2px 2px;border:1px solid #A8A59B}
+.can .body{position:relative;width:120px;height:214px;background:#1C3618;border-radius:4px 4px 12px 12px;display:flex;flex-direction:column;align-items:center;color:#F6E9BD;overflow:hidden;box-shadow:0 18px 28px -18px rgba(0,0,0,.55)}
+.can .body::before{content:"";position:absolute;top:0;bottom:0;left:16px;width:11px;background:rgba(255,255,255,.07)}
+.can .co{font-size:6px;letter-spacing:.16em;text-transform:uppercase;color:#D7A560;margin-top:14px;white-space:nowrap}
+.can img{width:74px;height:74px;margin-top:8px}
+.can .nm{font-family:var(--display);font-size:17px;margin-top:10px;line-height:1}
+.can .fl{font-size:6.5px;letter-spacing:.2em;text-transform:uppercase;margin-top:6px}
+.can .band{position:absolute;left:0;right:0;bottom:0;height:30px;border-top:1.5px solid #D7A560}
+/* drawn bottle */
+.bottle{display:flex;flex-direction:column;align-items:center}
+.bottle .cork{width:40px;height:22px;background:#A9805A;border-radius:4px 4px 2px 2px}
+.bottle .collar{width:46px;height:6px;background:#D7A560;border-radius:2px}
+.bottle .neck{width:38px;height:36px;background:#3A2414}
+.bottle .shoulder{width:132px;height:32px;background:#3A2414;border-radius:66px 66px 0 0}
+.bottle .belly{width:132px;height:170px;background:#3A2414;border-radius:0 0 12px 12px;display:grid;place-items:center;box-shadow:0 18px 28px -18px rgba(0,0,0,.55)}
+.bottle .label{width:100px;height:136px;background:#1C3618;border:1px solid #D7A560;outline:3px solid #1C3618;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#F6E9BD;text-align:center}
+.bottle .label img{width:52px;height:52px}
+.bottle .label .nm{font-family:var(--display);font-size:14px;line-height:1}
+.bottle .label .fl{font-size:5.5px;letter-spacing:.16em;text-transform:uppercase}
+.bottle .label .tag{height:6px;width:56px;margin-top:2px}
+
+/* story band */
+.story{background:var(--brand);color:var(--brand-ink)}
+.story .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.story img{width:100%;max-width:440px;height:auto;aspect-ratio:1;border-radius:50%;display:block}
+.story h2{font-size:clamp(32px,4.4vw,50px)}
+.story .eyebrow{color:var(--gold)}
+.story p{color:#E3DABF;max-width:36em}
+.story .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px;border-top:1px solid #3E5A38;padding-top:24px}
+.story .cols h3{font-size:20px;color:var(--brand-ink);margin-bottom:6px}
+.story .cols p{font-size:14px;line-height:1.55}
+@media (max-width:900px){.story .wrap{grid-template-columns:1fr}.story img{max-width:300px;margin:0 auto}.story .cols{grid-template-columns:1fr}}
+
+/* names */
+.names{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.names{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.names{grid-template-columns:1fr}}
+.name{border-top:3px solid var(--c);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.name h3{font-size:26px}
+.name .yr{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:600}
+.name p{font-size:15px;color:var(--muted)}
+
+/* how to */
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;counter-reset:s}
+@media (max-width:760px){.how{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:8px}
+.step .n{font-family:var(--display);font-size:44px;color:var(--gold-text);line-height:1}
+.step h3{font-size:22px}
+.step p{color:var(--muted);font-size:15px}
+
+/* find + wholesale */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:14px}
+.panel h3{font-size:28px}
+.panel p{color:var(--muted)}
+.where{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.where li{display:flex;justify-content:space-between;gap:12px;padding-block:12px;border-bottom:1px dashed var(--line);font-size:15px}
+.where li span:last-child{color:var(--muted);text-align:right}
+form{display:grid;gap:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.two{grid-template-columns:1fr}}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600}
+input,select,textarea{font:400 15px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:var(--radius);padding:11px 12px;min-height:44px;width:100%}
+textarea{min-height:90px;resize:vertical}
+.note{font-size:13px;color:var(--muted)}
+.ok{background:var(--brand);color:var(--brand-ink);border-radius:var(--radius);padding:14px 16px;font-size:14px}
+
+/* faq */
+.faq{max-width:820px}
+details{border-bottom:1px solid var(--line);padding-block:6px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:52px;font-family:var(--display);font-size:21px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--body);font-size:22px;color:var(--gold-text);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding-bottom:16px;max-width:62ch}
+
+/* footer */
+footer{background:var(--brand);color:#E3DABF;padding-block:56px 32px;margin-top:24px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:32px}
+@media (max-width:860px){footer .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){footer .wrap{grid-template-columns:1fr}}
+footer h4{font:600 12px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--brand-ink)}
+footer .brandline{font-family:var(--display);font-size:26px;color:var(--brand-ink)}
+footer .fine{grid-column:1/-1;border-top:1px solid #3E5A38;padding-top:20px;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sub-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.sub-form input{flex:1 1 180px;background:#132810;border-color:#3E5A38;color:var(--brand-ink)}
+
+/* overlays */
+.scrim{position:fixed;inset:0;background:rgba(10,18,9,.45);z-index:70}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--surface);z-index:80;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) 20px;box-shadow:-20px 0 40px -20px rgba(0,0,0,.4)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.drawer-head h2{font-size:26px}
+.x{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:none;color:var(--ink);font-size:20px;cursor:pointer}
+.lines{flex:1;overflow:auto;display:flex;flex-direction:column;gap:14px;padding-block:16px}
+.line{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center}
+.swatch{width:52px;height:64px;border-radius:6px;background:#1C3618;position:relative;overflow:hidden}
+.swatch::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;background:var(--c)}
+.line .t{font-family:var(--display);font-size:18px;line-height:1.1}
+.line .m{font-size:13px;color:var(--muted)}
+.qty{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:999px}
+.qty button{width:36px;height:36px;border:0;background:none;color:var(--ink);font-size:16px;cursor:pointer}
+.qty span{min-width:22px;text-align:center;font-variant-numeric:tabular-nums}
+.totals{border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:12px}
+.totals .r{display:flex;justify-content:space-between;font-size:15px}
+.empty{color:var(--muted);text-align:center;padding-block:40px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.ship{font-size:13px;color:var(--muted)}
+.meter{height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.meter b{display:block;height:100%;background:var(--gold);transition:width .3s}
+
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));pointer-events:none}
+.sheet{pointer-events:auto;background:var(--surface);border-radius:10px;max-width:920px;width:100%;max-height:100%;overflow:auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+@media (max-width:760px){.sheet{grid-template-columns:1fr}}
+.sheet .stage{background:var(--bg);display:grid;place-items:center;min-height:360px;padding:24px}
+.sheet .stage .pack{transform:scale(1.35)}
+.sheet .body{padding:28px;display:flex;flex-direction:column;gap:14px;position:relative}
+.sheet .x{position:absolute;top:16px;right:16px}
+.sheet h2{font-size:38px;padding-right:52px}
+.sheet .story-line{font-size:15px;color:var(--muted);border-left:0;font-style:italic}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{min-height:44px;padding:0 16px;border-radius:var(--radius);border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px var(--body);cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;line-height:1.2}
+.opt small{color:var(--muted);font-size:12px}
+.opt[aria-pressed="true"]{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:14px}
+.kv dt{font-weight:600}
+.kv dd{margin:0;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:999px;font-size:14px;z-index:90;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
+.preview-note{font-size:12px;color:var(--muted);text-align:center;padding-block:10px}
+</style>
+</head>
+<body>
+
+<div class="announce"><div class="wrap"><span><b>Free tastes</b> at local markets around Hunt Valley.</span><span>Brewed in small batches in Monkton, Maryland.</span></div></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Hunt Country Soda Co. home"><img src="assets/mark.png" alt=""><span>Hunt Country Soda Co.</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#shop">Shop</a><a href="#roots">Our roots</a><a href="#names">The names</a><a href="#find">Find us</a><a href="#wholesale">Wholesale</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="Open cart">Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Unsweetened botanical sodas</p>
+      <h1 style="margin-top:14px">The original root tonic, <em>brewed again.</em></h1>
+      <p class="lede">We simmer real sassafras, sarsaparilla, spruce and sumac into sparkling sodas with nothing sweet added. No sugar, no sweeteners, no caffeine. Just roots, water and bubbles.</p>
+      <div class="ctas"><a class="btn btn-solid" href="#shop">Shop the lineup</a><a class="btn btn-ghost" href="#find">Find a tasting</a></div>
+      <div class="facts"><span>0 g sugar</span><span>No sweeteners</span><span>No caffeine</span><span>Brewed from whole roots</span></div>
+    </div>
+    <figure class="hero-photo" style="margin:0">
+      <img src="assets/can-market.jpg" alt="A forest green Hunt Country Soda Co. can on a market table beside terracotta pots and a bucket of ice">
+      <figcaption class="stamp"><strong>Manor Root</strong>Sassafras root beer, brewed the long way. Our first pour.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="wrap"><div class="path" aria-hidden="true"><i></i><b></b><i></i></div></div>
+
+<section class="block" id="shop">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">The shop</p><h2 style="margin-top:8px">Four sodas, two ways to pour</h2><p>Cans for the cooler. Syrups for your soda maker, your bar or your taproom, about ten sodas a bottle.</p></div>
+      <div class="filters" role="group" aria-label="Filter products">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-f="can" aria-pressed="false">Cans</button>
+        <button class="chip" type="button" data-f="syrup" aria-pressed="false">Syrups</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="block story" id="roots">
+  <div class="wrap">
+    <img src="assets/badge.jpg" alt="The Hunt Country Soda Co. badge: a horseshoe with sassafras roots inside a gold double ring" loading="lazy">
+    <div>
+      <p class="eyebrow">Our roots</p>
+      <h2 style="margin-top:10px">Before soda was sweet, it was brewed.</h2>
+      <p style="margin-top:18px">Root beer started as a brewed root tea. Charles Hires showed his at the 1876 Centennial Exposition in Philadelphia, and druggists sold it for its medicinal qualities. Somewhere along the way the roots became flavoring and the drink became sugar. We went back to the pot.</p>
+      <div class="cols">
+        <div><h3>Brewed, not flavored</h3><p>Every batch is steeped from whole roots and botanicals. The ingredient list reads like a recipe.</p></div>
+        <div><h3>Nothing sweet added</h3><p>No cane sugar, no stevia, no monk fruit. Licorice root and vanilla do the rounding.</p></div>
+        <div><h3>Made in Monkton</h3><p>Small batches from Maryland horse country, sold first at the markets and taprooms down the road.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="names">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">The names</p><h2 style="margin-top:8px">Every flavor is a piece of Hunt Country</h2></div></div>
+    <div class="names">
+      <div class="name" style="--c:#5A3320"><span class="yr">Granted 1713</span><h3>Manor Root</h3><p>For My Lady’s Manor, the 10,000 acres east of Monkton that Lord Baltimore gave to his wife.</p></div>
+      <div class="name" style="--c:#6E2230"><span class="yr">Run since 1894</span><h3>Third Fence</h3><p>For the Maryland Hunt Cup’s third jump, 4 feet 6 inches of solid timber and one of the toughest on the course.</p></div>
+      <div class="name" style="--c:#7C8D6E"><span class="yr">Only in North America</span><h3>Timber</h3><p>For timber racing, the steeplechase run over solid wooden fences that Maryland is known for.</p></div>
+      <div class="name" style="--c:#A0414F"><span class="yr">Hunt slang</span><h3>Hilltopper</h3><p>For the riders who follow the hunt at an easy pace and watch the run from the hill.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Using the syrup</p><h2 style="margin-top:8px">A soda fountain in three steps</h2></div></div>
+    <div class="how">
+      <div class="step"><span class="n">1</span><h3>Fill a glass with ice</h3><p>A tall glass works best. Chill the seltzer too, so it keeps its fizz.</p></div>
+      <div class="step"><span class="n">2</span><h3>Add 3 tablespoons of syrup</h3><p>Start there and adjust. Unsweetened roots taste bolder than you expect.</p></div>
+      <div class="step"><span class="n">3</span><h3>Top with 12 oz of seltzer</h3><p>Pour slowly down the side of the glass. Give it one gentle stir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="find" style="padding-top:0">
+  <div class="wrap split">
+    <div class="panel">
+      <p class="eyebrow">Find us</p>
+      <h3>Taste before you buy</h3>
+      <p>We pour free samples every week. Come try all four.</p>
+      <ul class="where">
+        <li><span>Market days and tasting stops</span><span>Posted here soon</span></li>
+      </ul>
+      <p class="note">New stops are added as we grow. Join the list in the footer to hear first.</p>
+    </div>
+    <div class="panel" id="wholesale">
+      <p class="eyebrow">Wholesale</p>
+      <h3>Pour it at your place</h3>
+      <p>For bars, cafés and brewery taprooms that want a non-alcoholic house soda. One bottle of syrup makes about ten glasses.</p>
+      <form id="wsForm" novalidate>
+        <div class="two">
+          <label for="wsName">Your name<input id="wsName" name="name" autocomplete="name" required></label>
+          <label for="wsBiz">Business<input id="wsBiz" name="business" required></label>
+        </div>
+        <div class="two">
+          <label for="wsEmail">Email<input id="wsEmail" name="email" type="email" autocomplete="email" required></label>
+          <label for="wsType">Type<select id="wsType" name="type"><option>Brewery taproom</option><option>Bar or restaurant</option><option>Café</option><option>Shop or grocer</option></select></label>
+        </div>
+        <label for="wsMsg">What are you looking for?<textarea id="wsMsg" name="message" placeholder="Flavors, volume, draft or bottles"></textarea></label>
+        <button class="btn btn-solid" type="submit">Request wholesale info</button>
+        <p class="note" id="wsNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Questions</p><h2 style="margin-top:8px">Good to know</h2></div></div>
+    <div class="faq">
+      <details><summary>If there’s no sugar, will it taste sweet?</summary><p>It tastes like root beer without the candy. Licorice root, vanilla and cinnamon give a round, sweet-seeming flavor, but there is no sugar or sweetener of any kind. Most people find it closer to a fine sparkling water than a soda.</p></details>
+      <details><summary>Isn’t sassafras banned?</summary><p>Raw sassafras oil contains safrole, which the FDA removed from food in 1960. We use only safrole-free sassafras extract, which the FDA permits as a flavoring.</p></details>
+      <details><summary>Is there caffeine?</summary><p>No. All four sodas and syrups are caffeine-free.</p></details>
+      <details><summary>How do I store the syrup?</summary><p>Keep it in the refrigerator once it arrives and shake before pouring.</p></details>
+      <details><summary>Where do you ship?</summary><p>We are starting local, around Baltimore County and Harford County. Shipping details will be posted here when online orders open.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span class="brandline">Hunt Country Soda Co.</span>
+      <p style="font-size:14px">Unsweetened botanical sodas, brewed from real roots in Monkton, Maryland.</p>
+      <div class="path" aria-hidden="true" style="max-width:220px"><i></i><b></b><i></i></div>
+    </div>
+    <div><h4>Shop</h4><ul><li><a href="#shop">Cans</a></li><li><a href="#shop">Syrups</a></li><li><a href="#wholesale">Wholesale</a></li></ul></div>
+    <div><h4>About</h4><ul><li><a href="#roots">Our roots</a></li><li><a href="#names">The names</a></li><li><a href="#find">Find us</a></li></ul></div>
+    <div>
+      <h4>The hilltopper list</h4>
+      <p style="font-size:14px;margin-bottom:12px">New flavors and market days, about once a month.</p>
+      <form class="sub-form" id="subForm" novalidate>
+        <label for="subEmail" class="sr">Email address</label><input id="subEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+        <button class="btn btn-gold" type="submit">Join</button>
+      </form>
+      <p id="subNote" style="font-size:13px;margin-top:8px"></p>
+    </div>
+    <div class="fine"><span>© 2026 Hunt Country Soda Co. · Monkton, Maryland</span><span>Online ordering opens soon.</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="drawer" id="cart" hidden aria-label="Cart" role="dialog" aria-modal="true">
+  <div class="drawer-head"><h2>Your cart</h2><button class="x" type="button" id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="lines" id="lines"></div>
+  <div class="totals" id="totals"></div>
+</aside>
+
+<div class="modal" id="pdp" hidden role="dialog" aria-modal="true" aria-labelledby="pdpTitle">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+(function(){
+  var MARK='assets/mark.png';
+  var FLAV={
+    manor:{name:'Manor Root',flavor:'Sassafras root beer',band:'#5A3320',
+      notes:'Sassafras and vanilla up front, then licorice, clove and a dry, earthy finish.',
+      story:'Named for My Lady’s Manor, granted in 1713.',
+      ing:'Carbonated water, brewed sarsaparilla root, roasted chicory root, licorice root, ginger, cinnamon, star anise, clove, vanilla, safrole-free sassafras extract.'},
+    fence:{name:'Third Fence',flavor:'Sarsaparilla',band:'#6E2230',
+      notes:'Woody and a little bitter, like an old saloon sarsaparilla. Drier than root beer.',
+      story:'Named for the Hunt Cup’s famously tough third jump.',
+      ing:'Carbonated water, brewed sarsaparilla root, licorice root, ginger, cinnamon, star anise, vanilla.'},
+    timber:{name:'Timber',flavor:'Spruce & juniper',band:'#8A9A7C',
+      notes:'Bright pine and lemon peel with a little juniper and ginger. A walk in the woods.',
+      story:'Named for timber racing over solid wooden fences.',
+      ing:'Carbonated water, spruce, juniper berries, lemon peel, ginger.'},
+    hill:{name:'Hilltopper',flavor:'Sumac & lemon',band:'#A0414F',
+      notes:'Tart and rosy, like a pink lemonade with no sugar. Cold-steeped so it stays bright.',
+      story:'Named for the riders who watch the hunt from the hill.',
+      ing:'Carbonated water, cold-steeped sumac berries, lemon peel, mint.'}
+  };
+  var PRODUCTS=[];
+  Object.keys(FLAV).forEach(function(k){
+    PRODUCTS.push({id:k+'-can',flav:k,type:'can',label:'Cans',
+      opts:[{id:'4',name:'4-pack',meta:'Four 12 oz cans',price:14},{id:'12',name:'12-pack',meta:'Twelve 12 oz cans',price:39}]});
+  });
+  Object.keys(FLAV).forEach(function(k){
+    PRODUCTS.push({id:k+'-syrup',flav:k,type:'syrup',label:'Syrup',
+      opts:[{id:'1',name:'1 bottle',meta:'16 oz, about 10 sodas',price:22},{id:'3',name:'3 bottles',meta:'48 oz, about 30 sodas',price:60}]});
+  });
+  var FREE=50;
+  // Paste a form endpoint here (for example a Formspree URL) to receive wholesale requests and sign-ups by email.
+  var FORM_ENDPOINT='';
+  function send(data){
+    if(!FORM_ENDPOINT)return Promise.resolve(false);
+    return fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:data}).then(function(r){return r.ok}).catch(function(){return false});
+  }
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var money=function(n){return '$'+n.toFixed(2)};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+  function packHTML(p){
+    var f=FLAV[p.flav];
+    if(p.type==='can'){
+      return '<div class="pack can" aria-hidden="true"><div class="lid"></div><div class="body"><span class="co">Hunt Country Soda Co.</span><img src="'+MARK+'" alt=""><span class="nm">'+esc(f.name)+'</span><span class="fl">'+esc(f.flavor)+'</span><span class="band" style="background:'+f.band+'"></span></div></div>';
+    }
+    return '<div class="pack bottle" aria-hidden="true"><div class="cork"></div><div class="collar"></div><div class="neck"></div><div class="shoulder"></div><div class="belly"><div class="label"><img src="'+MARK+'" alt=""><span class="nm">'+esc(f.name)+'</span><span class="fl">Soda syrup</span><span class="tag" style="background:'+f.band+'"></span></div></div></div>';
+  }
+
+  // cart state
+  var cart=[];
+  try{cart=JSON.parse(localStorage.getItem('hcsc-cart')||'[]')||[]}catch(e){cart=[]}
+  function save(){try{localStorage.setItem('hcsc-cart',JSON.stringify(cart))}catch(e){}}
+  function find(id){for(var i=0;i<PRODUCTS.length;i++)if(PRODUCTS[i].id===id)return PRODUCTS[i]}
+  function add(pid,oid,q){
+    var key=pid+'|'+oid;var line=cart.filter(function(l){return l.key===key})[0];
+    if(line)line.q+=q;else cart.push({key:key,pid:pid,oid:oid,q:q});
+    save();renderCart();
+    var p=find(pid),o=p.opts.filter(function(x){return x.id===oid})[0];
+    toast('Added '+FLAV[p.flav].name+' '+o.name+' to your cart');
+  }
+  function renderCart(){
+    var count=cart.reduce(function(a,l){return a+l.q},0);
+    $('#cartCount').textContent=count;
+    $('#cartBtn').setAttribute('aria-label','Open cart, '+count+' item'+(count===1?'':'s'));
+    var lines=$('#lines'),tot=$('#totals');
+    if(!cart.length){
+      lines.innerHTML='<div class="empty"><p>Your cart is empty.</p><a class="btn btn-solid" href="#shop" id="emptyShop">Shop the lineup</a></div>';
+      tot.innerHTML='';
+      var es=$('#emptyShop');if(es)es.addEventListener('click',closeCart);
+      return;
+    }
+    var sub=0;
+    lines.innerHTML=cart.map(function(l,i){
+      var p=find(l.pid),o=p.opts.filter(function(x){return x.id===l.oid})[0],f=FLAV[p.flav];
+      sub+=o.price*l.q;
+      return '<div class="line"><div class="swatch" style="--c:'+f.band+'"></div><div><div class="t">'+esc(f.name)+'</div><div class="m">'+esc(p.label+' · '+o.name)+' · '+money(o.price)+'</div></div><div class="qty"><button type="button" data-i="'+i+'" data-d="-1" aria-label="One fewer '+esc(f.name)+'">−</button><span>'+l.q+'</span><button type="button" data-i="'+i+'" data-d="1" aria-label="One more '+esc(f.name)+'">+</button></div></div>';
+    }).join('');
+    var left=Math.max(0,FREE-sub),pct=Math.min(100,sub/FREE*100);
+    tot.innerHTML='<p class="ship">'+(left>0?'Add '+money(left)+' for free local delivery.':'You get free local delivery.')+'</p><div class="meter"><b style="width:'+pct+'%"></b></div><div class="r"><span>Subtotal</span><span class="price">'+money(sub)+'</span></div><button class="btn btn-solid" type="button" id="checkout">Check out</button><p class="note" id="coNote" hidden>Online checkout opens soon. Until then, find us at the market.</p>';
+    $('#checkout').addEventListener('click',function(){$('#coNote').hidden=false});
+  }
+  $('#lines').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-i]');if(!b)return;
+    var i=+b.dataset.i;cart[i].q+=+b.dataset.d;if(cart[i].q<=0)cart.splice(i,1);save();renderCart();
+  });
+
+  // grid
+  var filter='all';
+  function renderGrid(){
+    $('#grid').innerHTML=PRODUCTS.filter(function(p){return filter==='all'||p.type===filter}).map(function(p){
+      var f=FLAV[p.flav],o=p.opts[0];
+      return '<article class="card"><button class="stage" type="button" data-open="'+p.id+'" aria-label="View '+esc(f.name+' '+p.label.toLowerCase())+'"><span class="badge">'+p.label+'</span>'+packHTML(p)+'</button><div class="info"><h3>'+esc(f.name)+'</h3><p class="sub">'+esc(f.flavor)+' · '+esc(o.meta)+'</p><div class="row"><span class="price">From '+money(o.price)+'</span><button class="add" type="button" data-add="'+p.id+'">Add to cart</button></div></div></article>';
+    }).join('');
+  }
+  $('#grid').addEventListener('click',function(e){
+    var a=e.target.closest('[data-add]');if(a){var p=find(a.dataset.add);add(p.id,p.opts[0].id,1);return}
+    var o=e.target.closest('[data-open]');if(o)openPdp(o.dataset.open,o);
+  });
+  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
+    filter=c.dataset.f;document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',String(x===c))});renderGrid();
+  })});
+
+  // overlays
+  var lastFocus=null;
+  function showScrim(){$('#scrim').hidden=false;document.body.style.overflow='hidden'}
+  function hideScrim(){$('#scrim').hidden=true;document.body.style.overflow=''}
+  function openCart(){lastFocus=document.activeElement;closePdp(true);$('#cart').hidden=false;showScrim();$('#cartClose').focus()}
+  function closeCart(){$('#cart').hidden=true;hideScrim();if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+  $('#cartBtn').addEventListener('click',openCart);
+  $('#cartClose').addEventListener('click',closeCart);
+
+  var pdpState=null;
+  function openPdp(id,from){
+    lastFocus=from||document.activeElement;
+    var p=find(id),f=FLAV[p.flav];pdpState={p:p,oid:p.opts[0].id,q:1};
+    $('#sheet').innerHTML='<div class="stage">'+packHTML(p)+'</div><div class="body"><button class="x" type="button" id="pdpClose" aria-label="Close">✕</button><p class="eyebrow">'+p.label+' · '+esc(f.flavor)+'</p><h2 id="pdpTitle">'+esc(f.name)+'</h2><p>'+esc(f.notes)+'</p><p class="story-line">'+esc(f.story)+'</p><div class="opts" role="group" aria-label="Size">'+p.opts.map(function(o,i){return '<button class="opt" type="button" data-o="'+o.id+'" aria-pressed="'+(i===0)+'"><span>'+o.name+' · '+money(o.price)+'</span><small>'+esc(o.meta)+'</small></button>'}).join('')+'</div><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="qty"><button type="button" id="qm" aria-label="Decrease quantity">−</button><span id="qv">1</span><button type="button" id="qp" aria-label="Increase quantity">+</button></div><button class="btn btn-solid" type="button" id="pdpAdd" style="flex:1">Add to cart</button></div><dl class="kv"><dt>Ingredients</dt><dd>'+esc(f.ing)+'</dd><dt>Per serving</dt><dd>0 g sugar · no sweeteners · no caffeine</dd>'+(p.type==='syrup'?'<dt>To pour</dt><dd>3 Tbsp over ice, top with 12 oz seltzer. Keep refrigerated.</dd>':'')+'</dl></div>';
+    $('#pdp').hidden=false;showScrim();$('#pdpClose').focus();
+    $('#pdpClose').addEventListener('click',function(){closePdp()});
+    $('#sheet').querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){pdpState.oid=b.dataset.o;$('#sheet').querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))})})});
+    $('#qm').addEventListener('click',function(){pdpState.q=Math.max(1,pdpState.q-1);$('#qv').textContent=pdpState.q});
+    $('#qp').addEventListener('click',function(){pdpState.q=Math.min(24,pdpState.q+1);$('#qv').textContent=pdpState.q});
+    $('#pdpAdd').addEventListener('click',function(){add(pdpState.p.id,pdpState.oid,pdpState.q);closePdp()});
+  }
+  function closePdp(silent){if($('#pdp').hidden)return;$('#pdp').hidden=true;hideScrim();if(!silent&&lastFocus&&lastFocus.focus)lastFocus.focus()}
+  $('#pdp').addEventListener('click',function(e){if(e.target===$('#pdp'))closePdp()});
+  $('#scrim').addEventListener('click',function(){if(!$('#cart').hidden)closeCart();else closePdp()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(!$('#cart').hidden)closeCart();else closePdp()}});
+
+  var tt;function toast(m){var t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(function(){t.hidden=true},2400)}
+
+  // forms
+  $('#wsForm').addEventListener('submit',function(e){
+    e.preventDefault();var f=e.target,bad=['wsName','wsBiz','wsEmail'].filter(function(id){return !$('#'+id).value.trim()});
+    if(!$('#wsEmail').checkValidity())bad.push('wsEmail');
+    if(bad.length){$('#wsNote').textContent='Add your name, business and a valid email so we can reply.';$('#'+bad[0]).focus();return}
+    var first=$('#wsName').value.trim().split(' ')[0];var fd=new FormData(f);fd.append('form','wholesale');
+    send(fd).then(function(ok){$('#wsNote').className=ok?'ok':'note';$('#wsNote').textContent=ok?'Thanks, '+first+'. We got your request and will be in touch soon.':'Online wholesale requests open soon. Ask for us at the market in the meantime.';if(ok)f.reset();});
+  });
+  $('#subForm').addEventListener('submit',function(e){
+    e.preventDefault();var v=$('#subEmail');
+    if(!v.value.trim()||!v.checkValidity()){$('#subNote').textContent='Enter a valid email address.';v.focus();return}
+    var fd=new FormData();fd.append('email',v.value.trim());fd.append('form','newsletter');
+    send(fd).then(function(ok){$('#subNote').textContent=ok?'Thanks. You are on the list.':'Sign-ups open soon. Thanks for your interest.';if(ok)v.value='';});
+  });
+
+  renderGrid();renderCart();
+})();
+</script>
+</body>
+</html>
